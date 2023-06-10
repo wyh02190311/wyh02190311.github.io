@@ -31,7 +31,7 @@
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_8z08qcz5sq3.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1686399198405">
+  <link rel="stylesheet" href="/css/style.css?v=1686399638376">
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -194,34 +194,18 @@
         
         <div class="nexmoe-post-meta nexmoe-rainbow">
             <a><i class="nexmoefont icon-calendar-fill"></i>2023年06月10日</a>
-            <a><i class="nexmoefont icon-areachart"></i>0 字</a>
+            <a><i class="nexmoefont icon-areachart"></i>153 字</a>
             <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
         </div>
         
         <article>
             
-                <!--more>
-（1）在spark-env.sh中, 删除: SPARK_MASTER_HOST=node1，增加：
- ![spark]](./spark/1.png)
-将spark-env.sh分发到node2和node3上
-scp spark-env.sh node2:/export/server/spark/conf/
-scp spark-env.sh node3:/export/server/spark/conf/
-停止当前StandAlone集群
-sbin/stop-all.sh
-（2）启动集群
-# 在node1上 启动一个master 和全部worker
-sbin/start-all.sh
-# 注意, 下面命令在node2上执行
-sbin/start-master.sh
-# 在node2上启动一个备用的master进程
- ![spark](./spark/2.png)
- ![spark]](./spark/3.png)
-（3）master主备切换
-提交一个spark任务到当前alive master上：
-bin/spark-submit --master spark://node1:7077
-/export/server/spark/examples/src/main/python/pi.py 1000
-![spark](./spark/4.png) 
--->
+                <span id="more"></span>
+<p>（1）在spark-env.sh中, 删除: SPARK_MASTER_HOST&#x3D;node1，增加：<br> <img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/10/spark/1.png" alt="spark" class="lazyload"><br>将spark-env.sh分发到node2和node3上<br>scp spark-env.sh node2:&#x2F;export&#x2F;server&#x2F;spark&#x2F;conf&#x2F;<br>scp spark-env.sh node3:&#x2F;export&#x2F;server&#x2F;spark&#x2F;conf&#x2F;<br>停止当前StandAlone集群<br>sbin&#x2F;stop-all.sh<br>（2）启动集群</p>
+<h1 id="在node1上-启动一个master-和全部worker"><a href="#在node1上-启动一个master-和全部worker" class="headerlink" title="在node1上 启动一个master 和全部worker"></a>在node1上 启动一个master 和全部worker</h1><p>sbin&#x2F;start-all.sh</p>
+<h1 id="注意-下面命令在node2上执行"><a href="#注意-下面命令在node2上执行" class="headerlink" title="注意, 下面命令在node2上执行"></a>注意, 下面命令在node2上执行</h1><p>sbin&#x2F;start-master.sh</p>
+<h1 id="在node2上启动一个备用的master进程"><a href="#在node2上启动一个备用的master进程" class="headerlink" title="在node2上启动一个备用的master进程"></a>在node2上启动一个备用的master进程</h1><p> <img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/10/spark/2.png" alt="spark" class="lazyload"><br> <img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/10/spark/3.png" alt="spark" class="lazyload"><br>（3）master主备切换<br>提交一个spark任务到当前alive master上：<br>bin&#x2F;spark-submit –master spark:&#x2F;&#x2F;node1:7077<br>&#x2F;export&#x2F;server&#x2F;spark&#x2F;examples&#x2F;src&#x2F;main&#x2F;python&#x2F;pi.py 1000<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/10/spark/4.png" alt="spark" class="lazyload"> </p>
+
             
         </article>
     </div>
@@ -238,48 +222,13 @@ bin/spark-submit --master spark://node1:7077
         
         <div class="nexmoe-post-meta nexmoe-rainbow">
             <a><i class="nexmoefont icon-calendar-fill"></i>2023年06月09日</a>
-            <a><i class="nexmoefont icon-areachart"></i>36 字</a>
+            <a><i class="nexmoefont icon-areachart"></i>75 字</a>
             <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
         </div>
         
         <article>
             
                 <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<!--more>
-## Quick Start
-
-### Create a new post
-
-``` bash
-$ hexo new "My New Post"
-```
-
-More info: [Writing](https://hexo.io/docs/writing.html)
-
-### Run server
-
-``` bash
-$ hexo server
-```
-
-More info: [Server](https://hexo.io/docs/server.html)
-
-### Generate static files
-
-``` bash
-$ hexo generate
-```
-
-More info: [Generating](https://hexo.io/docs/generating.html)
-
-### Deploy to remote sites
-
-``` bash
-$ hexo deploy
-```
-
-More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
--->
             
         </article>
     </div>
@@ -999,7 +948,7 @@ More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
 <script src="/lib/fancybox/js/jquery.fancybox.min.js"></script>
 
 
-<script src="/js/app.js?v=1686399198406"></script>
+<script src="/js/app.js?v=1686399638378"></script>
 
 <script src="https://lib.baomitu.com/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
 <script>
@@ -1018,6 +967,12 @@ More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
 <!-- hexo injector body_end start -->
 <script src="/js/clock.js"></script>
 
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+<script src="/js/search.js"></script>
+
+<script src="/js/webapp.js"></script>
+
 <script src="https://lib.baomitu.com/clipboard.js/2.0.8/clipboard.min.js"></script>
 
 <script src="/lib/codeBlock/codeBlockFuction.js"></script>
@@ -1029,12 +984,6 @@ More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
 <script src="/lib/codeBlock/codeShrink.js"></script>
 
 <link rel="stylesheet" href="/lib/codeBlock/matery.css">
-
-<script src="/js/webapp.js"></script>
-
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-
-<script src="/js/search.js"></script>
 <!-- hexo injector body_end end --></body>
 </html>
 
