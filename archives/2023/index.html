@@ -31,7 +31,7 @@
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_8z08qcz5sq3.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1686402551278">
+  <link rel="stylesheet" href="/css/style.css?v=1686403409147">
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -183,44 +183,25 @@
         <section class="nexmoe-posts">
     
     <div class="nexmoe-post">
-        <a href="/2023/06/10/spark/">
+        <a href="/2023/06/10/pyspark/">
             
                 <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 24.305555555555554%;">
-                    <img data-src="/images/background/xiaomai.jpg" data-sizes="auto" alt="spark(HA)" class="lazyload">
-                    <h1>spark(HA)</h1>
+                    <img data-src="/images/background/xiaomai.jpg" data-sizes="auto" alt="Spark(Pyspark基础编码环境)" class="lazyload">
+                    <h1>Spark(Pyspark基础编码环境)</h1>
                 </div>
             
         </a>
         
         <div class="nexmoe-post-meta nexmoe-rainbow">
             <a><i class="nexmoefont icon-calendar-fill"></i>2023年06月10日</a>
-            <a><i class="nexmoefont icon-areachart"></i>133 字</a>
+            <a><i class="nexmoefont icon-areachart"></i>57 字</a>
             <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
         </div>
         
         <article>
             
                 <span id="more"></span>
-
-<h1 id="1-在spark-env-sh中-删除-SPARK-MASTER-HOST-x3D-node1，增加："><a href="#1-在spark-env-sh中-删除-SPARK-MASTER-HOST-x3D-node1，增加：" class="headerlink" title="(1)在spark-env.sh中, 删除: SPARK_MASTER_HOST&#x3D;node1，增加："></a>(1)在spark-env.sh中, 删除: SPARK_MASTER_HOST&#x3D;node1，增加：</h1><p><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/10/spark/1.png" alt="spark" class="lazyload"></p>
-<h1 id="2-将spark-env-sh分发到node2和node3上"><a href="#2-将spark-env-sh分发到node2和node3上" class="headerlink" title="(2)将spark-env.sh分发到node2和node3上"></a>(2)将spark-env.sh分发到node2和node3上</h1><pre><code class="bash">scp spark-env.sh node2:/export/server/spark/conf/
-scp spark-env.sh node3:/export/server/spark/conf/
-</code></pre>
-<p>#停止当前StandAlone集群</p>
-<pre><code class="bash">sbin/stop-all.sh
-</code></pre>
-<h1 id="3-启动集群"><a href="#3-启动集群" class="headerlink" title="(3)启动集群"></a>(3)启动集群</h1><p> 在node1上 启动一个master 和全部worker</p>
-<pre><code class="bash">sbin/start-all.sh
-</code></pre>
-<p>#注意, 下面命令在node2上执行</p>
-<pre><code class="bash">sbin/start-master.sh
-</code></pre>
-<p> 在node2上启动一个备用的master进程<br> <img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/10/spark/2.png" alt="spark" class="lazyload"><br> <img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/10/spark/3.png" alt="spark" class="lazyload"></p>
-<h1 id="（4）master主备切换"><a href="#（4）master主备切换" class="headerlink" title="（4）master主备切换"></a>（4）master主备切换</h1><p>提交一个spark任务到当前alive master上：</p>
-<pre><code class="bash">bin/spark-submit --master spark://node1:7077
-/export/server/spark/examples/src/main/python/pi.py 1000
-</code></pre>
-<p><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/10/spark/4.png" alt="spark" class="lazyload"> </p>
+<p>（1）PyCharm配置Python解释器<br>1.配置本地解释器<br> <img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/10/pyspark/py1.png" alt="pyspark" class="lazyload"><br>2.配置远程SSH Linux解释器<br> <img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/10/pyspark/py2.png" alt="pyspark" class="lazyload"><br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/10/pyspark/py3.png" alt="pyspark" class="lazyload"><br>3.设置虚拟机python环境路径<br> <img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/10/pyspark/py4.png" alt="pyspark" class="lazyload"><br>（2）WordCount代码实战<br>1.在本地读取words文件<br> <img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/10/pyspark/py5.png" alt="pyspark" class="lazyload"><br>2.在node1上读取words文件<br> <img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/10/pyspark/py6.png" alt="pyspark" class="lazyload"></p>
 
             
         </article>
@@ -964,7 +945,7 @@ scp spark-env.sh node3:/export/server/spark/conf/
 <script src="/lib/fancybox/js/jquery.fancybox.min.js"></script>
 
 
-<script src="/js/app.js?v=1686402551278"></script>
+<script src="/js/app.js?v=1686403409148"></script>
 
 <script src="https://lib.baomitu.com/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
 <script>
@@ -997,9 +978,9 @@ scp spark-env.sh node3:/export/server/spark/conf/
 
 <script src="/js/search.js"></script>
 
-<script src="/js/clock.js"></script>
-
 <script src="/js/webapp.js"></script>
+
+<script src="/js/clock.js"></script>
 <!-- hexo injector body_end end --></body>
 </html>
 
