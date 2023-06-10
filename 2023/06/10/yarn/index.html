@@ -5,7 +5,7 @@
 <head>
   
   <meta name="baidu-site-verification" content="code-J1Qg17G6wT" />
-  <title>文章归档：2023 - Hexo</title>
+  <title>Spark(Yarn) - Hexo</title>
   <meta charset="UTF-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
@@ -16,13 +16,21 @@
     <meta name="baidu-site-verification" content="code-J1Qg17G6wT" />
 
   <link rel="shortcut icon" href="/images/head/head.jpg" type="image/png" />
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/2023/index.html">
+  <meta name="description" content="Yarn">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spark(Yarn)">
+<meta property="og:url" content="http://example.com/2023/06/10/yarn/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Yarn">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2023/06/10/yarn/y1.png">
+<meta property="og:image" content="http://example.com/2023/06/10/yarn/y2.png">
+<meta property="og:image" content="http://example.com/2023/06/10/yarn/y3.png">
+<meta property="article:published_time" content="2023-06-10T13:24:42.460Z">
+<meta property="article:modified_time" content="2023-06-10T13:32:18.534Z">
 <meta property="article:author" content="wangyuhao">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2023/06/10/yarn/y1.png">
   <link rel="stylesheet" href="https://lib.baomitu.com/highlight.js/9.15.8/styles/atom-one-dark.min.css" crossorigin>
   <link rel="stylesheet" href="/lib/mdui_043tiny/css/mdui.css">
   <link rel="stylesheet" href="/lib/iconfont/iconfont.css">
@@ -31,7 +39,7 @@
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_8z08qcz5sq3.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1686403973764">
+  <link rel="stylesheet" href="/css/style.css?v=1686403973760">
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -180,78 +188,73 @@
   </div>
   <div id="nexmoe-content">
     <div class="nexmoe-primary">
-        <section class="nexmoe-posts">
+        <div class="nexmoe-post">
     
-    <div class="nexmoe-post">
-        <a href="/2023/06/10/yarn/">
-            
-                <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 24.305555555555554%;">
-                    <img data-src="/images/background/xiaomai.jpg" data-sizes="auto" alt="Spark(Yarn)" class="lazyload">
-                    <h1>Spark(Yarn)</h1>
-                </div>
-            
-        </a>
-        
-        <div class="nexmoe-post-meta nexmoe-rainbow">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2023年06月10日</a>
-            <a><i class="nexmoefont icon-areachart"></i>86 字</a>
-            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+        <div class="nexmoe-post-cover"
+             style="padding-bottom: 24.305555555555554%;">
+            <img data-src="/images/background/xiaomai.jpg" data-sizes="auto" alt="Spark(Yarn)" class="lazyload">
+            <h1>Spark(Yarn)</h1>
         </div>
-        
-        <article>
-            
-                <p>Yarn</p>
-            
-        </article>
-    </div>
     
-    <div class="nexmoe-post">
-        <a href="/2023/06/10/pyspark/">
+
+        <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2023年06月10日</a>
+    <a><i class="nexmoefont icon-areachart"></i>86 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+</div>
+
+        <div class="nexmoe-post-right">
             
-                <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 24.305555555555554%;">
-                    <img data-src="/images/background/xiaomai.jpg" data-sizes="auto" alt="Spark(Pyspark基础编码环境)" class="lazyload">
-                    <h1>Spark(Pyspark基础编码环境)</h1>
-                </div>
-            
-        </a>
-        
-        <div class="nexmoe-post-meta nexmoe-rainbow">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2023年06月10日</a>
-            <a><i class="nexmoefont icon-areachart"></i>58 字</a>
-            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
         </div>
-        
+
         <article>
-            
-                <p>pyspark</p>
-            
+            <p>Yarn</p>
+<span id="more"></span>
+<h1 id="（1）确保HADOOP-CONF-DIR和YARN-CONF-DIR在spark-env-sh-以及环境变量配置文件中"><a href="#（1）确保HADOOP-CONF-DIR和YARN-CONF-DIR在spark-env-sh-以及环境变量配置文件中" class="headerlink" title="（1）确保HADOOP_CONF_DIR和YARN_CONF_DIR在spark-env.sh 以及环境变量配置文件中"></a>（1）确保HADOOP_CONF_DIR和YARN_CONF_DIR在spark-env.sh 以及环境变量配置文件中</h1><h1 id="（2）bin-x2F-pyspark-–master-yarn-–deploy-mode-client-cluster"><a href="#（2）bin-x2F-pyspark-–master-yarn-–deploy-mode-client-cluster" class="headerlink" title="（2）bin&#x2F;pyspark –master yarn –deploy-mode client|cluster"></a>（2）bin&#x2F;pyspark –master yarn –deploy-mode client|cluster</h1><pre><code class="bash">--deploy-mode 选项是指定部署模式, 默认是 客户端模式
+client就是客户端模式
+cluster就是集群模式
+--deploy-mode 仅可以用在YARN模式下
+</code></pre>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/10/yarn/y1.png" alt="yarn" class="lazyload"><br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/10/yarn/y2.png" alt="yarn" class="lazyload"></p>
+<h1 id="（3）bin-x2F-spark-shell-–master-yarn-–deploy-mode-client-cluster"><a href="#（3）bin-x2F-spark-shell-–master-yarn-–deploy-mode-client-cluster" class="headerlink" title="（3）bin&#x2F;spark-shell –master yarn –deploy-mode client|cluster"></a>（3）bin&#x2F;spark-shell –master yarn –deploy-mode client|cluster</h1><p><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/10/yarn/y3.png" alt="yarn" class="lazyload"></p>
+
         </article>
-    </div>
-    
-    <div class="nexmoe-post">
-        <a href="/2023/06/09/hello-world/">
-            
-                <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 24.305555555555554%;">
-                    <img data-src="/images/background/xiaomai.jpg" data-sizes="auto" alt="Hello World" class="lazyload">
-                    <h1>Hello World</h1>
-                </div>
-            
-        </a>
+
         
+            
+  <div class="nexmoe-post-copyright">
+    <strong>本文作者：</strong>wangyuhao<br>
+    
+    <strong>本文链接：</strong><a href="http://example.com/2023/06/10/yarn/" title="http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;06&#x2F;10&#x2F;yarn&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;06&#x2F;10&#x2F;yarn&#x2F;</a><br>
+
+    
+      <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+    
+  </div>
+
+
+        
+
         <div class="nexmoe-post-meta nexmoe-rainbow">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2023年06月09日</a>
-            <a><i class="nexmoefont icon-areachart"></i>75 字</a>
-            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
-        </div>
-        
-        <article>
-            
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-            
-        </article>
-    </div>
     
+    
+</div>
+
+    <div class="nexmoe-post-footer">
+        <section class="nexmoe-comment">
+    <div class="valine"></div>
+<script src='https://lib.baomitu.com/valine/1.3.9/Valine.min.js'></script>
+<script>
+    // 使用方法 https://valine.js.org/quickstart.html
+    new Valine({
+        el: '.valine',
+        appId: 'r5zxC0st0DDjPA9auXzMV7HY-gzGzoHsz',
+        appKey: '3bqCsovpyfTPHUzTHovd3V3V'
+    })
+</script>
 </section>
+    </div>
+</div>
 
 
         <div class="nexmoe-post-right">
@@ -966,7 +969,7 @@
 <script src="/lib/fancybox/js/jquery.fancybox.min.js"></script>
 
 
-<script src="/js/app.js?v=1686403973765"></script>
+<script src="/js/app.js?v=1686403973761"></script>
 
 <script src="https://lib.baomitu.com/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
 <script>
