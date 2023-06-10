@@ -31,7 +31,7 @@
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_8z08qcz5sq3.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1686394537490">
+  <link rel="stylesheet" href="/css/style.css?v=1686394717346">
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -194,13 +194,17 @@
         
         <div class="nexmoe-post-meta nexmoe-rainbow">
             <a><i class="nexmoefont icon-calendar-fill"></i>2023年06月10日</a>
-            <a><i class="nexmoefont icon-areachart"></i>0 字</a>
+            <a><i class="nexmoefont icon-areachart"></i>153 字</a>
             <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
         </div>
         
         <article>
             
-                
+                <p>（1）在spark-env.sh中, 删除: SPARK_MASTER_HOST&#x3D;node1，增加：<br><img src="/2023/06/10/blog/img.png"><br>将spark-env.sh分发到node2和node3上<br>scp spark-env.sh node2:&#x2F;export&#x2F;server&#x2F;spark&#x2F;conf&#x2F;<br>scp spark-env.sh node3:&#x2F;export&#x2F;server&#x2F;spark&#x2F;conf&#x2F;<br>停止当前StandAlone集群<br>sbin&#x2F;stop-all.sh<br>（2）启动集群</p>
+<h1 id="在node1上-启动一个master-和全部worker"><a href="#在node1上-启动一个master-和全部worker" class="headerlink" title="在node1上 启动一个master 和全部worker"></a>在node1上 启动一个master 和全部worker</h1><p>sbin&#x2F;start-all.sh</p>
+<h1 id="注意-下面命令在node2上执行"><a href="#注意-下面命令在node2上执行" class="headerlink" title="注意, 下面命令在node2上执行"></a>注意, 下面命令在node2上执行</h1><p>sbin&#x2F;start-master.sh</p>
+<h1 id="在node2上启动一个备用的master进程"><a href="#在node2上启动一个备用的master进程" class="headerlink" title="在node2上启动一个备用的master进程"></a>在node2上启动一个备用的master进程</h1><p>（3）master主备切换<br>提交一个spark任务到当前alive master上：<br>bin&#x2F;spark-submit –master spark:&#x2F;&#x2F;node1:7077<br>&#x2F;export&#x2F;server&#x2F;spark&#x2F;examples&#x2F;src&#x2F;main&#x2F;python&#x2F;pi.py 1000</p>
+
             
         </article>
     </div>
@@ -983,7 +987,7 @@
 <script src="/lib/fancybox/js/jquery.fancybox.min.js"></script>
 
 
-<script src="/js/app.js?v=1686394537491"></script>
+<script src="/js/app.js?v=1686394717346"></script>
 
 <script src="https://lib.baomitu.com/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
 <script>
